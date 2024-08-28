@@ -60,3 +60,47 @@ def slice_foods():
         last = foods[foodSlice]
         return last
 print('Exercise 3:', slice_foods())
+
+# Exercise 4: Dictionaries and String Formatting
+#
+# Create a dictionary named home_town containing the keys of city, state, and population.
+# Using the home_town dictionary, assign to a variable named home_town_message a string with this format: “I was born in <city>, <state> - population of <population>”
+
+def hometown_info(town):
+    return f"I was born in {town['city']}, {town['state']} - population of {town['population']}"
+
+
+home_town = {
+    "city": "New York",
+    "state": "New York",
+    "population": 8419000
+}
+# Call the function and print the result
+print('Exercise 4:', hometown_info(home_town))
+
+# Exercise 5: Iterating Over Dictionary Items
+#
+# Define an empty list named home_town_items.
+# Use a for loop to iterate over the key: value pairs in the home_town dictionary and append a string with the following format to home_town_items: "<key> = <value>"
+home_town_list = [
+    
+    {
+        "city": "Los Angeles",
+        "state": "California",
+        "population": 3980000
+    },
+    {
+        "city": "Chicago",
+        "state": "Illinois",
+        "population": 2716000
+    }
+]
+
+def list_home_town_items(fullList):
+    cleandList = []
+    for one in fullList:
+        cleandList.append(f"{one['city']} = {one['population']}")
+    return cleandList
+
+# Call the function and print the result
+print('Exercise 5:', list_home_town_items(home_town_list))
